@@ -132,5 +132,5 @@ return webAns;
 }
 
 for (i = 0; i < 15; i++) {
-  document.write(pikeSales());
+  document.write(webSales());
 }
