@@ -1,39 +1,97 @@
+'use strict';
 
 var hours = ['6:00am','7:00am','8:00am','9:00am','10:00am','11:00am','12:00pm','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','8:00pm'];
 
-var coffeeStand = {
-  this.stand = 'stand'
-  minCust = 'minCust'
-  maxCust: 55,
-  hourlyCust:
-  cupsCust: 1.2,
-  hourlyCups:,
-  dailyCups: 0,
-  lbsCust: 3.7,
-  hourlyLbs:,
-  dailyLbs:,
-  allDailyBeans:,
-  hourlyCustomers: function(){
-  return Math.floor((Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
-  },
-  hourlyCups: function(){
-  },
-  hourlyLbs: function(){
-  },
-  render: function(){
+function Coffeestand(stand, minCust, maxCust, cupsCust, lbsCust) {
+  this.stand = stand;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.hourlyCust = '[]';
+  this.cupsCust = cupsCust;
+  this.hourlyCups = '[]';
+  this.dailyCups = '0';
+  this.lbsCust = lbsCust;
+  this.hourlyLbs = '[]';
+  this.dailyLbs = '0';
+  this.allDailyBeans = '0';
+
+  this.hourlyCustomers = function() {
+    for (var i = 0; i < hours.length; i++) {
+  this.hourlyCust.push(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
   }
 };
 
-function pikeSales(){
-var pikeCups = Math.round(pike.pikeCust() * pike.cupsCust);
-var pikeLbs = Math.round(pike.pikeCust() * (pike.lbsCust)).toFixed(1);
-var pikeAns = [pike.pikeCust(), pikeCups, pikeLbs];
-return pikeAns;
-}
+  this.hourlyCupsEqu = function() {
+    for (var i = 0; i < hours.length; i++) {
+      var cups = this.cupsCust * this.hourlyCust[i];
+      this.hourlyCups.push(parseFloat(cups.toFixed(1)));
+      this.dailyCups += cups;
+      this.allDailyBeans += (cups / 20);
+    }
+  };
 
-for (var i = 0; i < hours.length; i++){
-  console.log(pikeSales());
-}
+  this.hourlyLbsEqu = function() {
+    for (var i = 0; i < hours.length; i++) {
+      var beans = Math.floor(this.lbsCust * this.hourlyCust[i]);
+      this.hourlyLbs.push(beans);
+      this.dailyBeansByLb += beans;
+    }
+  };
+
+  this.render = function() {
+    this.hourlyCustomers();
+    this.hourlyCupsEqu();
+    this.hourlyLbsEqu();
+
+  var ulEl = document.createElement('ul');
+  ulEl.appendChild(document.createTextNode(this.stand));
+  var sectionEl = document.getElementById('tweaks_finest').appendChild(ulEl);
+
+  for (var i = 0; i < hours.length; i++){
+    var liEl = document.createElement('li');
+    liEl.textContent = hours[i] + ":" + this.allDailyBeans + ' [' + this.hourlyCust[i] +  ' customers, ' + this.dailyCups + ' cups (' + (this.dailyCups / 20) + '), ' + this.dailyLbs + ' lbs to-go]';
+    ulEl.appendChild(liEl);
+    }
+  }
+};
+
+var pike = new Coffeestand('Pike Place', 14, 55, 1.2, 3.7);
+pike.this.render();
+var capHill = new Coffeestand('Capitol Hill', 32, 48, 3.2, 0.4);
+//capHill.render();
+var library = new Coffeestand('Seattle Public Library', 49, 75, 2.6, 0.2);
+//library.render();
+var union = new Coffeestand('South Lake Union', 35, 88, 1.3, 3.7);
+//union.render();
+var airport = new Coffeestand('Sea-Tac Airport', 124, 1.1, 2.7);
+//airport.render();
+var web = new Coffeestand('Website Sales', 3, 6, 0, 6.7);
+//web.render();
+
+//Coffeestand.render();
+
+// var stands = [pike, capHill, library, union, airport, web];
+//   for (var i = 0; i < stands.length; i++) {
+//     stands[i].this.render();
+//   }
+
+
+
+
+//Separation from old and new work.
+
+
+
+// function pikeSales(){
+// var pikeCups = Math.round(pike.pikeCust() * pike.cupsCust);
+// var pikeLbs = Math.round(pike.pikeCust() * (pike.lbsCust)).toFixed(1);
+// var pikeAns = [pike.pikeCust(), pikeCups, pikeLbs];
+// return pikeAns;
+// }
+//
+// for (var i = 0; i < hours.length; i++){
+//   console.log(pikeSales());
+// }
 // console.log(pikeSales());
 // var capHill = {
 //   minCust: 32,
