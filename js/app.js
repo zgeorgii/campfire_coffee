@@ -49,7 +49,7 @@ Coffeestand.prototype.render = function() {
 
   var thEl = document.createElement('th');
 
-  thEl.textContent = 'Coffee Stands';
+  thEl.textContent = this.stand;
 
   trEl.appendChild(thEl);
 
@@ -57,16 +57,8 @@ Coffeestand.prototype.render = function() {
 
   sectEl.appendChild(tblEl);
 
-for (var i = 0; i < hours.length; i++){
-  var tdEl = document.createElement('td');
-  tdEl.textContent = hours[i];
-  trEl.appendChild(tdEl);
-}
   var trEl2 = document.createElement('tr');
   var thEl2 = document.createElement('th');
-  trEl2.textContent = this.stand;
-  trEl2.appendChild(thEl2);
-  tblEl.appendChild(trEl2);
 
   this.hourlyCustomers();
   this.hourlyCupsEqu();
@@ -78,18 +70,28 @@ for (var i = 0; i < hours.length; i++){
     trEl2.appendChild(tdEl);
   }
 
-var ulEl = document.createElement('ul');
-ulEl.appendChild(document.createTextNode(this.stand));
-var sectionEl = document.getElementById('tweaks_finest').appendChild(ulEl);
+  for (var i = 0; i < hours.length; i++){
+    var tdEl = document.createElement('td');
+    tdEl.textContent = hours[i] + ": " + (this.hourlyCupLbs[i] + this.hourlyLbs[i]).toFixed(1) +  ' lbs ' + this.hourlyCust[i] + ' customers, ' + this.hourlyCups[i].toFixed(1) + 'cups (' + this.hourlyCupLbs[i].toFixed(1) + ' lbs), ' + this.hourlyLbs[i].toFixed(1) + 'lbs to-go';
+    trEl.appendChild(tdEl);
+    }
 
-for (var i = 0; i < hours.length; i++){
-  var liEl = document.createElement('li');
-  liEl.textContent = hours[i] + ": " + (this.hourlyCupLbs[i] + this.hourlyLbs[i]).toFixed(1) +  ' lbs [' + this.hourlyCust[i] + ' customers, ' + this.hourlyCups[i].toFixed(1) + 'cups (' + this.hourlyCupLbs[i].toFixed(1) + ' lbs), ' + this.hourlyLbs[i].toFixed(1) + 'lbs to-go]';
-  ulEl.appendChild(liEl);
-  }
-  liEl = document.createElement('li');
-  liEl.textContent = 'Total lbs of Beans Sold at this Location: ' + this.allDailyBeans.toFixed(1);
-  ulEl.appendChild(liEl);
+    tdEl = document.createElement('td');
+      tdEl.textContent = 'Total lbs of Beans Sold at this Location: ' + this.allDailyBeans.toFixed(1);
+      trEl.appendChild(tdEl);
+
+// var ulEl = document.createElement('ul');
+// ulEl.appendChild(document.createTextNode(this.stand));
+// var sectionEl = document.getElementById('tweaks_finest').appendChild(ulEl);
+//
+// for (var i = 0; i < hours.length; i++){
+//   var liEl = document.createElement('li');
+//   liEl.textContent = hours[i] + ": " + (this.hourlyCupLbs[i] + this.hourlyLbs[i]).toFixed(1) +  ' lbs [' + this.hourlyCust[i] + ' customers, ' + this.hourlyCups[i].toFixed(1) + 'cups (' + this.hourlyCupLbs[i].toFixed(1) + ' lbs), ' + this.hourlyLbs[i].toFixed(1) + 'lbs to-go]';
+//   ulEl.appendChild(liEl);
+//   }
+//   liEl = document.createElement('li');
+//   liEl.textContent = 'Total lbs of Beans Sold at this Location: ' + this.allDailyBeans.toFixed(1);
+//   ulEl.appendChild(liEl);
 };
 
 var pike = new Coffeestand('Pike Place', 14, 55, 1.2, 3.7);
@@ -110,7 +112,6 @@ var web = new Coffeestand('Website Sales', 3, 6, 0, 6.7);
   union.render();
   airport.render();
   web.render();
-
   // document.write('table');
   // document.write('<tr><th>Coffee Stands</th></tr>');
   // document.write('<tr><td>' + pike.render() + '</td><tr>');
