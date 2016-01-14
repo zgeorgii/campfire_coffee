@@ -41,9 +41,42 @@ Coffeestand.prototype.hourlyLbsEqu = function() {
 };
 
 Coffeestand.prototype.render = function() {
+  var sectEl = document.getElementById('tweaks_finest');
+
+  var tblEl = document.createElement('table');
+
+  var trEl = document.createElement('tr');
+
+  var thEl = document.createElement('th');
+
+  thEl.textContent = 'Coffee Stands';
+
+  trEl.appendChild(thEl);
+
+  tblEl.appendChild(trEl);
+
+  sectEl.appendChild(tblEl);
+
+for (var i = 0; i < hours.length; i++){
+  var tdEl = document.createElement('td');
+  tdEl.textContent = hours[i];
+  trEl.appendChild(tdEl);
+}
+  var trEl2 = document.createElement('tr');
+  var thEl2 = document.createElement('th');
+  trEl2.textContent = this.stand;
+  trEl2.appendChild(thEl2);
+  tblEl.appendChild(trEl2);
+
   this.hourlyCustomers();
   this.hourlyCupsEqu();
   this.hourlyLbsEqu();
+
+  for (var i = 0; i < hours.length; i++) {
+    var tdEl = document.createElement('td');
+    tdEl.textContent = this.hourlyLbs[i].toFixed[1];
+    trEl2.appendChild(tdEl);
+  }
 
 var ulEl = document.createElement('ul');
 ulEl.appendChild(document.createTextNode(this.stand));
@@ -114,37 +147,3 @@ var web = new Coffeestand('Website Sales', 3, 6, 0, 6.7);
   // trEl.appendChild(tdEl);
   //
   // tblEl.appendChild(trEl);
-
-
-
-
-
-// function makeTbl() {
-//
-//   var stands = [pike.render(), capHill.render(), library.render(), union.render(), airport.render(), web.render()];
-//
-//   var sectEl = document.getElementById('tweaks_finest');
-//
-//   var tblEl = document.createElement('table');
-//
-//   var trEl = document.createElement('tr');
-//
-//   var thEl = document.createElement('th');
-//
-//   thEl.textContent = 'Coffee Stands';
-//
-//   trEl.appendChild(thEl);
-//
-//   for (var i = 0; i < stands.length; i++) {
-//
-//   var tdEl = document.createElement('td');
-//
-//   tdEl.textContent = stands[i];
-//
-//   trEl.appendChild(tdEl);
-// }
-//   tblEl.appendChild(trEl);
-//
-//   sectEl.appendChild(tblEl);
-// }
-// makeTbl();
