@@ -1,1 +1,40 @@
-/*css*/
+body{
+  background: #5a524f;
+  background-image: radial-gradient(#fe6b1d, #57446e);
+
+}
+
+h1{
+  font-family: Palatino, serif;
+  font-size: 36px;
+  color: #e5b59d;
+  text-align: center;
+  text-shadow: 1.8px 1.8px #512914;
+  border: 1px #e5b59d;
+  border-style: ridge;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 7px;
+  background-image: radial-gradient(#bf490d, #57446e);
+
+}
+
+.slogan{
+  font-family: Palatino, serif;
+  font-size: 36px;
+  color: #e5b59d;
+  text-align: center;
+  font-style: italic;
+  text-shadow: 1.8px 1.8px #512914;
+  text-decoration: underline;
+
+}
+
+.stand_sales {
+  border: 2px solid black;
+}
+
+ul{
+  border: 2px solid black;
+  margin: 6px;
+}
