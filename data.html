@@ -6,6 +6,26 @@
 <div class="stand_sales">
 <section id='tweaks_finest'></section>
   <table id="stands"></table>
+
+  <form id="tableData">
+    <fieldset>
+      <legend>Search inventory data: </legend>
+
+      <label for="unit">Unit: </label>
+      <input name="unit" type="text">
+
+      <label for="measurement">Measurement: </label>
+      <input name="measurement" type="text" size="50">
+
+      <button id="dataButton" type="submit">Find Measurement</button>
+    </fieldset>
+  </form>
+
+  <button id="clearData">Clear Data</button>
+
+  <ul id="dataList"></ul>
+
+
 <script src="js/app.js" type="text/javascript"></script>
 </div>
 </body>
