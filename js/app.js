@@ -13,7 +13,9 @@ function Coffeestand(stand, minCust, maxCust, cupsCust, lbsCust) {
   this.hourlyCupLbs = [];
   this.allHourlyBeans = this.hourlyCupLbs + this.hourlyLbs;
   this.allDailyBeans = 0;
+
 };
+
 
  Coffeestand.prototype.hourlyCustomers = function() {
   for (var i = 0; i < hours.length; i++) {
@@ -95,6 +97,8 @@ var web = new Coffeestand('Website Sales', 3, 6, 0, 6.7);
 
 
 
+
+
   // var tblEl = document.createElement('table');
   //
   // var trEl = document.createElement('tr');
@@ -110,6 +114,10 @@ var web = new Coffeestand('Website Sales', 3, 6, 0, 6.7);
   // trEl.appendChild(tdEl);
   //
   // tblEl.appendChild(trEl);
+
+
+
+
 
 // function makeTbl() {
 //
