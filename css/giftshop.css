@@ -1,0 +1,112 @@
+body{
+  background: #5a524f;
+  background-image: radial-gradient(#fe6b1d, #57446e);
+  font-family:  Palatino, serif;
+}
+.background{
+  background-image: url(http://gstreetmarketmedia.com/wp-content/uploads/2014/03/Coffee-Beans.jpg);
+  background-size: cover;
+  padding: .5%;
+}
+.campCof{
+  font-family: Palatino, serif;
+  font-size: 38px;
+  color: #e5b59d;
+  text-align: center;
+  text-shadow: 1.8px 1.8px #512914;
+  border: 1px #e5b59d;
+  border-style: ridge;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 7px;
+  background-image: radial-gradient(#bf490d, #57446e);
+  margin: 0% 3% 3% 3%;
+}
+.slogan{
+  font-family: Palatino, serif;
+  font-size: 32px;
+  color: #e5b59d;
+  text-align: center;
+  font-style: italic;
+  text-shadow: 1.8px 1.8px #512914;
+  text-decoration: underline;
+  border: 1px #e5b59d;
+  border-style: ridge;
+  border-radius: 5px;
+  background-image: radial-gradient(#bf490d, #57446e);
+  margin: 2.5% 25% 2.5% 25%;
+  padding-top: .5%;
+  padding-bottom: .5%;
+}
+.logo{
+  display:block;
+  width: 300px;
+  height:200px;
+  border: 3px ridge #674325;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navBar{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+button{
+  color: #e5b59d;
+  font-family: Palatino, serif;
+  border: 1px solid #e5b59d;
+  background-image: radial-gradient(#bf490d, #57446e);
+  border-radius: 5px;
+  font-size:18px;
+}
+
+hr{
+  border-color: #e5b59d;
+  display: block;
+  border-width: 1px;
+}
+
+.whole{
+  display:flex;
+  justify-content: space-around;
+  width: 100%;
+  color: #603523;
+}
+h1{
+  font-size: 34px;
+  text-decoration: underline;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border:5px ridge #86482f;
+  border-radius: 7px;
+  width: 40%;
+  text-align: center;
+  background-color: #f97c3e;
+  font-size: 23px;
+  padding: 2%;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border:5px ridge #86482f;
+    border-radius: 7px;
+  width: 40%;
+  text-align: center;
+  background-color: #f97c3e;
+  font-size: 23px;
+  padding:2%;
+}
+
+img{
+  border: 3px ridge #b35f40;
+  width:80%;
+  height:auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
+}
