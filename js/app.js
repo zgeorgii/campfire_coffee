@@ -81,3 +81,20 @@ var web = new Coffeestand('Website Sales', 3, 6, 0, 6.7);
   union.render();
   airport.render();
   web.render();
+
+  var addData = document.getElementById('tableData');
+  addData.addEventListener('submit', addStand);
+
+    function addStand(e) {
+      console.log(e);
+      e.preventDefault();
+
+    var stand = e.target.stand1.value;
+    var minCust = e.target.minCust1.value;
+    var maxCust = e.target.maxCust1.value;
+    var cupsCust = e.target.cupsPerCust.value;
+    var lbsCust = e.target.lbsPerCust.value;
+
+    var addNewStore = new Coffeestand(stand, +minCust, +maxCust, +cupsCust, +lbsCust);
+    addNewStore.render();
+  };
