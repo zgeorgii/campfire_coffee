@@ -4,7 +4,7 @@ body{
 
 }
 
-h1{
+.campCof{
   font-family: Palatino, serif;
   font-size: 36px;
   color: #e5b59d;
@@ -21,7 +21,7 @@ h1{
 
 .slogan{
   font-family: Palatino, serif;
-  font-size: 36px;
+  font-size: 30px;
   color: #e5b59d;
   text-align: center;
   font-style: italic;
@@ -30,11 +30,99 @@ h1{
 
 }
 
-.stand_sales {
-  border: 2px solid black;
+.logo{
+  display:block;
+  width: 300px;
+  height:200px;
+  border: 3px ridge #674325;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navBar{
+  display:flex;
+  justify-content: space-around;
 }
 
-ul{
-  border: 2px solid black;
-  margin: 6px;
+button{
+  color: #e5b59d;
+  font-family: Palatino, serif;
+  border: 1px solid #e5b59d;
+  text-shadow: 1.8px 1.8px #512914;
+  background-image: radial-gradient(#bf490d, #57446e);
+  border-radius: 5px;
+  font-size:14px;
+}
+
+hr{
+  border-color: #e5b59d;
+  display: block;
+  border-width: 1px;
+}
+
+h3{
+  text-decoration: underline;
+}
+
+.history{
+  color: #4f1e05;
+  font-size: 18px;
+  font-family: Palatino, serif;
+  display: block;
+  border: 5px ridge #e5b59d;
+  float: left;
+  background-color: #fa7d48;
+  text-align: center;
+  padding-left: 15px;
+  line-height: 35px;
+  width: 100%;
+}
+
+.tent{
+  display:block;
+  width: 450px;
+  height: auto;
+  float: right;
+  margin:20px;
+  border: 3px ridge #e5b59d;
+}
+
+.eco{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  float:left;
+  width: 55%;
+  margin:20px 20px 20px 0px;
+}
+
+.ecoText{
+  border: 5px ridge #e5b59d;
+  background-color: #fa7d48;
+  text-align: center;
+  color: #4f1e05;
+  font-size: 18px;
+  font-family: Palatino, serif;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 35px;
+  width: 100%;
+}
+.fire{
+  display:block;
+  width: 525px;
+  height: auto;
+  margin-bottom: 20px;
+  border: 3px ridge #e5b59d;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pot{
+  display:block;
+  width: 400px;
+  height: 250px;
+  margin-bottom: 20px;
+  border: 3px ridge #e5b59d;
+  margin-left: auto;
+  margin-right: auto;
 }

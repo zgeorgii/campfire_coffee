@@ -1,16 +1,26 @@
-
+*{
+  font-family: Avantgarde, sans-serif;
+  color: #f4d7c8;
+}
 td{
-  border: 1px solid black;
+  border: 2.2px solid #393939;
 }
 
 tr{
-  border: 1px solid black;
+  border: 3px solid #393939;
+}
+table:nth-child(even) {
+background: #ff5a0a;
 }
 
+table:nth-child(odd) {
+  background: #57446e;
+}
 th{
-  border: 1px solid black;
+  border: 2.2px solid #393939;
 }
 
 table{
-  border: 1px solid black;
+  border: 3px solid #452d5c;
+  background: #5a524f;
 }

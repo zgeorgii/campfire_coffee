@@ -1,1 +1,9 @@
+IIFE
+(function(){
+})();
 
+Ternary operator
+
+condition ? expr1 : expr2
+
+Sub for shot if else statements
