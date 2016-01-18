@@ -3,10 +3,14 @@ body{
   background-image: radial-gradient(#fe6b1d, #57446e);
 
 }
-
+.background{
+  background-image: url(http://gstreetmarketmedia.com/wp-content/uploads/2014/03/Coffee-Beans.jpg);
+  background-size: cover;
+  padding: .5%;
+}
 .campCof{
   font-family: Palatino, serif;
-  font-size: 36px;
+  font-size: 38px;
   color: #e5b59d;
   text-align: center;
   text-shadow: 1.8px 1.8px #512914;
@@ -16,18 +20,24 @@ body{
   padding-top: 3px;
   padding-bottom: 7px;
   background-image: radial-gradient(#bf490d, #57446e);
-
+  margin: 0% 3% 3% 3%;
 }
 
 .slogan{
   font-family: Palatino, serif;
-  font-size: 30px;
+  font-size: 32px;
   color: #e5b59d;
   text-align: center;
   font-style: italic;
   text-shadow: 1.8px 1.8px #512914;
   text-decoration: underline;
-
+  border: 1px #e5b59d;
+  border-style: ridge;
+  border-radius: 5px;
+  background-image: radial-gradient(#bf490d, #57446e);
+  margin: 2.5% 25% 2.5% 25%;
+  padding-top: .5%;
+  padding-bottom: .5%;
 }
 
 .logo{
@@ -50,7 +60,7 @@ button{
   text-shadow: 1.8px 1.8px #512914;
   background-image: radial-gradient(#bf490d, #57446e);
   border-radius: 5px;
-  font-size:14px;
+  font-size:18px;
 }
 
 hr{
@@ -74,7 +84,8 @@ h3{
   text-align: center;
   padding-left: 15px;
   line-height: 35px;
-  width: 100%;
+  width: 95%;
+  margin: 1.5% 0% 0% 1.5%;
 }
 
 .tent{
@@ -92,7 +103,7 @@ h3{
   justify-content: space-around;
   float:left;
   width: 55%;
-  margin:20px 20px 20px 0px;
+  margin:1% 1% 1% 1.5%;
 }
 
 .ecoText{
@@ -106,12 +117,13 @@ h3{
   padding-right: 15px;
   line-height: 35px;
   width: 100%;
+  height: auto;
 }
 .fire{
   display:block;
   width: 525px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 2%;
   border: 3px ridge #e5b59d;
   margin-left: auto;
   margin-right: auto;
@@ -125,4 +137,99 @@ h3{
   border: 3px ridge #e5b59d;
   margin-left: auto;
   margin-right: auto;
+}
+
+.merch{
+  color: #4f1e05;
+  font-size: 20px;
+  font-family: Palatino, serif;
+  border: 5px ridge #e5b59d;
+  background-color: #fa7d48;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  float:right;
+  justify-content: space-around;
+  width: 37.5%;
+  margin: 1% 1.5% 1% 1%;
+}
+
+h2{
+  text-decoration: underline;
+  font-size: 28px;
+}
+.shirt{
+  display:block;
+  width: 65%;
+  height: auto;
+  margin-bottom: 1.5%;
+  border: 3px ridge #e5b59d;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mug{
+  display:block;
+  width: 65%;
+  height: auto;
+  margin-bottom: 1.5%;
+  border: 3px ridge #e5b59d;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fam{
+  display:block;
+  bottom: 0;
+  width: 52%;
+  float: left;
+  text-align: center;
+  margin: 0% 1% 1% 1.5%;
+  border: 5px ridge #e5b59d;
+  color: #4f1e05;
+  font-size: 20px;
+  font-family: Palatino, serif;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background-color: #fa7d48;
+  line-height: 35px;
+}
+
+.famText{
+  color: #e5b59d;
+  border: 4px ridge #e5b59d;
+  border-radius: 5px;
+  background-image: radial-gradient(#bf490d, #57446e);
+}
+
+.family{
+  display:block;
+  width: 45%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 3px ridge #e5b59d;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+.coffee{
+  display:block;
+  width: 45%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 3px ridge #e5b59d;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+}
+
+.contact{
+  color: #4f1e05;
+  font-size: 20px;
+  font-family: Palatino, serif;
+  border: 5px ridge #e5b59d;
+  background-color: #fa7d48;
+  text-align: center;
+  float:right;
+  width: 36.5%;
+  margin: 1% 1.5% 1% 1%;
 }
