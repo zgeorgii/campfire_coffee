@@ -61,7 +61,12 @@ button{
   border-radius: 5px;
   font-size:18px;
 }
+a{
+  text-decoration: none;
+  color: #e5b59d;
+  text-shadow: 1px 1px #512914;
 
+}
 hr{
   border-color: #e5b59d;
   display: block;
